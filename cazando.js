@@ -6,12 +6,18 @@ const ANCHO_GATO=200
 const ALTO_COMIDA=40
 const ANCHO_COMIDA=60
 
-let gatoX=(canvas.width/2)-(ANCHO_GATO/2)
-let gatoY=(canvas.height/2)-(ALTO_GATO/2)
+let gatoX=0
+let gatoY=0
 let comidaX=0
 let comidaY=0
 
 function iniciarJuego(){
+    gatoX=(canvas.width/2)-(ANCHO_GATO/2);
+    gatoY=(canvas.height/2)-(ALTO_GATO/2);
+
+    comidaX=canvas.width-ANCHO_COMIDA;
+    comidaY=canvas.height-ALTO_COMIDA;
+
     graficarGato();
     graficarComida();
 }
