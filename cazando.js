@@ -89,18 +89,25 @@ function detectarColision(){
         puntos=puntos+1;
         mostrarEnSpan("puntos",puntos)
 
-        comidaX=generarAleatorio(0,canvas.width-ANCHO_COMIDA);
+        if(puntos==6){
+            clearInterval(intervalo);
+            alert("GANADOR");
+        } else {comidaX=generarAleatorio(0,canvas.width-ANCHO_COMIDA);
         comidaY=generarAleatorio(0,canvas.height-ALTO_COMIDA);
 
         limpiarCanva();
         graficarGato();
         graficarComida();
-    }
+        }    
+    }   
 }
 
 function restarTiempo(){
     tiempo=tiempo-1;
     mostrarEnSpan("tiempo",tiempo);
 
-  
+    if(tiempo==0){
+        clearInterval(intervalo);
+        alert("GAME OVER");
+    }
 }
