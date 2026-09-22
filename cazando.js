@@ -111,3 +111,16 @@ function restarTiempo(){
         alert("GAME OVER");
     }
 }
+
+function reiciarJuego(){
+    tiempo=10;
+    puntos=0;
+
+    clearInterval(intervalo);
+
+    mostrarEnSpan("puntos",puntos);
+    mostrarEnSpan("tiempo",tiempo);
+
+    limpiarCanva();
+    iniciarJuego();
+}
