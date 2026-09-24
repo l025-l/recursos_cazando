@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <title>Juego Cazando</title>
   <link rel="stylesheet" href="cazando.css">
@@ -7,24 +7,35 @@
 </head>
 <body onload="iniciarJuego()">
 
-  <h1>Juego Cazando</h1>
-  <p>Autor: CRISTIAN DAHUA</p>
-  <canvas id="areaJuego" width="500" height="500"></canvas>
+  <div class="game-container">
+      <h1 class="neon-text">Juego Cazando</h1>
+      <p class="author">Autor: CRISTIAN DAHUA</p>
+      
+     <div class="panel">
+        <div class="marcador">
+          <span class="etiqueta">⭐ PUNTOS</span>
+          <span id="puntos" class="valor highlight-puntos">0</span>
+        </div>
+        
+        <div class="marcador">
+          <span class="etiqueta">⏱️ TIEMPO</span>
+          <span id="tiempo" class="valor highlight-tiempo">10</span>
+        </div>
+      </div>
 
-  <div class="controles">
-    <button onclick="moverArriba()">⬆</button>
-    <br>
-    <button onclick="moverIzquierda()">⬅</button>
-    <button onclick="moverAbajo()">⬇</button>
-    <button onclick="moverDerecha()">➡</button>
+      <canvas id="areaJuego" width="500" height="500"></canvas>
+
+      <div class="controles">
+        <button onclick="moverArriba()">⬆</button>
+        <br>
+        <button onclick="moverIzquierda()">⬅</button>
+        <button onclick="moverAbajo()">⬇</button>
+        <button onclick="moverDerecha()">➡</button>
+      </div>
+      
+      <button class="btn-reiniciar" onclick="reiniciarJuego()">REINICIAR</button>
+      <p id="mensaje"></p>
   </div>
-  
-  <div class="panel">
-    <span>Puntos: <span id="puntos">0</span></span>
-    <span>Tiempo: <span id="tiempo">10</span></span>
-  </div>
-  <button onclick="reiciarJuego()">REICIAR</button>
-  <p id="mensaje"></p>
 
   <script src="cazando.js"></script>
 </body>

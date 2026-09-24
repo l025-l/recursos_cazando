@@ -1,0 +1,2 @@
+Tarea: Integra una imagen de fondo al proyecto.
+Requerimientos: Utiliza la imagen llamada "neon.jpg" como fondo de pantalla (background) en el archivo CSS. Asegúrate de que el fondo cubra toda la pantalla sin repetirse. Ajusta los colores de los textos, botones y bordes del canvas con colores neón (azul y rosa) para que combinen perfectamente con la temática de la imagen. Añade sombras (box-shadow) a los botones y al contenedor.
